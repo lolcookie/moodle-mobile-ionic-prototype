@@ -36,13 +36,6 @@ angular.module('mm.events', [])
                 start: "1/2/2015 10:00am",
                 end: "3/2/2015 6:00pm"
               },
-              {
-                id: 5,
-                icon: "ion-calendar",
-                name: "GSOC",
-                start: "1/2/2015 10:00am",
-                end: "3/2/2015 6:00pm"
-              },
             ]
         }
         return store.events;
