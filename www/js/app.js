@@ -8,6 +8,7 @@ angular.module('mm', [
   'mm.sections',
   'mm.forums',
   'mm.events',
+  'mm.scorm',
   'pascalprecht.translate'])
 
 .run(function($ionicPlatform, $rootScope, $state, mmAuth, $ionicBody, $window) {
@@ -439,6 +440,47 @@ angular.module('mm', [
               return mmSiteEvents.getEvent($stateParams.index);
             }
           }
+        }
+      }
+    })
+/*
+   .state('site.scorms', {
+      url: '/scorms',
+      views: {
+        'site': {
+          controller: 'mmSiteEventsCtrl',
+          templateUrl: 'tpl/site-events.html',
+          resolve: {
+            events: function(mmSiteEvents) {
+              return mmSiteEvents.getAllEvents();
+            }
+          }
+        }
+      }
+    })
+
+    .state('site.scorm', {
+      tablet: 'site.events',
+      url: '/scorm',
+      views: {
+        'site': {
+          controller: 'mmSiteEventCtrl',
+          templateUrl: 'tpl/site-scorm.html',
+          resolve: {
+            'event': function($stateParams, mmSiteEvents) {
+              return mmSiteEvents.getEvent($stateParams.index);
+            }
+          }
+        }
+      }
+    })
+  */
+    .state('site.scorm', {
+      url: '/scorm',
+      views: {
+        'site': {
+          controller: 'AppCtrl',
+          templateUrl: 'tpl/site-scorm.html'
         }
       }
     })
